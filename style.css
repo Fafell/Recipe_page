@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --cl-primary: hsl(14, 45%, 36%);
+    --cl-secondary: hsl(332, 51%, 32%);
+    --cl-White: hsl(0, 0%, 100%);
+    --cl-Rose_White: hsl(330, 100%, 98%);
+    --cl-Eggshell: hsl(30, 54%, 90%);
+    --cl-Light-Grey: hsl(30, 18%, 87%);
+    --cl-Wenge-Brown: hsl(30, 10%, 34%);
+    --cl-Dark-Charcoal: hsl(24, 5%, 18%);
+
+    --fs-400: 16px;
+
+    --fw-regular: 400;
+    --fw-bold: 600;
+    --fw-more-bold: 700;
+
+    --ff-normal: "Outfit", sans-serif;
+    --ff-fancy: "Young Serif", serif;
+}
+
+/*********** style section ***********/
+body {
+    background-color: var(--cl-Eggshell);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.5rem;
+    font-family: var(--ff-normal);
+}
+
+main {
+    background-color: var(--cl-White);
+    padding: 40px 40px 21px 40px;
+    max-width: 736px;
+    margin: 8rem;
+    border-radius: 1.5rem;
+}
+
+img {
+    width: 100%;
+    display: block;
+    border-radius: .75rem;
+}
+
+h1 {
+    font-family: var(--ff-fancy);
+    font-size: calc(var(--fs-400) + 24px);
+    font-weight: var(--fw-regular);
+    color: var(--cl-Dark-Charcoal);
+    padding: 2rem 0;
+    margin-top: 1rem;
+    line-height: 2.5rem;
+}
+
+h2 {
+    font-size: calc(var(--fs-400) + 12px);
+    font-family: var(--ff-fancy);
+    font-weight: var(--fw-regular);
+    color: var(--cl-primary);
+    margin-top: 33px;
+}
+
+p {
+    font-size: var(--fs-400);
+    color: var(--cl-Wenge-Brown);
+}
+
+.accent {
+    font-weight: var(--fw-more-bold);
+}
+
+/*********** SHORT LIST ***********/
+.short-information {
+    background-color: var(--cl-Rose_White);
+    border-radius: .75rem;
+    margin: 1.75rem 0;
+    padding: 30px 30px 20px 30px;
+}
+
+.short-information > span {
+    font-size: calc(var(--fs-400) + 4px);
+    font-weight: var(--fw-bold);
+    color: var(--cl-secondary);
+}
+
+.short-information > ul {
+    padding: .25rem;
+    color: var(--cl-secondary);
+    border: inherit;
+}
+
+.short-information > ul > li {
+    padding: .15rem;
+    font-size: 12px;
+}
+
+.list-short-information {
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--cl-Wenge-Brown);
+    margin-left: 1.25rem;
+    font-size: var(--fs-400);
+}
+
+/*********** BIG LIST ***********/
+ul, ol {
+    padding: .5rem 0 1.75rem 0;
+    margin: .8rem 0 .5rem .5rem;
+    border-bottom: 1px solid var(--cl-Light-Grey);
+    color: var(--cl-primary);
+}
+
+ul {
+    padding-left: 1rem;
+}
+
+li {
+    padding: .2rem 0;
+    font-size: 12px;
+}
+
+.list-basic {
+    color: var(--cl-Wenge-Brown);
+    margin-left: 1rem;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
+    display: inline-block;
+    vertical-align: top;
+}
+
+.instructions > ol > li {
+    font-size: var(--fs-400);
+    font-weight: var(--fw-more-bold);
+    color: var(--cl-primary);
+    margin-left: 1.1rem;
+}
+
+/*********** TABLE ***********/
+.nutrition > p {
+    margin-top: 1.6rem;
+}
+
+table {
+    padding: .4rem 0 .4rem .4rem;
+    width: 100%;
+    font-size: var(--fs-400);
+    color: var(--cl-Wenge-Brown);
+}
+
+tr {
+    position: relative;
+}
+
+td {
+    padding: .7rem .7rem .7rem 1.5rem;
+    width: 50%;
+}
+
+.cl-accent {
+    font-weight: var(--fw-more-bold);
+    color: var(--cl-primary);
+    padding-left: .25rem;
+}
+
+/***** line *****/
+tr::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--cl-Light-Grey);
+}
+
+.table-last::after {
+    content: '';
+    height: 0;
+}
+
+/*********** QUERIES ***********/
+@media (width < 500px){
+    main, img {
+        margin: 0;
+        border-radius: 0;
+        padding: 0;
+    }
+
+    section, .description, h1 {
+        padding: 0 30px;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+        margin: 2.5rem 0 1.4rem 0;
+    }
+
+}
+
+@media ( 501px < width < 730px){
+    main {
+        margin: 2rem;
+    }
+}
+
+/*********** additional section ***********/
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    width: 100%;
+    bottom: 10px;
+  }
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+  }
